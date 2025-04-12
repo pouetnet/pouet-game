@@ -122,8 +122,8 @@ var maxTimer = 60;
 var correctScore = 100;
 var correctTimer = 10;
 var skipPenalty = 25;
-var cacheSize = 1;
-var safeCacheSize = 1;
+var cacheSize = 20;
+var safeCacheSize = 3;
 
 function ensureCache()
 {
@@ -139,7 +139,7 @@ function ensureCache()
         }
     });
   }
-  if (demos.length > safeCacheSize)
+  if (demos.length >= safeCacheSize)
   {
     $("start").disabled = null;
   }
@@ -279,7 +279,7 @@ document.observe("dom:loaded",function(){
   </div>
   <div id="menu">
     <h1>Guess the demo !</h1>
-    <button id="start">start !</start>
+    <button id="start">start !</button>
   </div>
   <div id="gameOver">
     <h2 id="finalScore">Your score was <span></span> points !</h2>
@@ -287,7 +287,7 @@ document.observe("dom:loaded",function(){
       Here are all the demos you encountered:
       <ul></ul>
     </div>
-    <button id="restart">Restart game</start>
+    <button id="restart">Restart game</button>
   </div>
 </div>
 
