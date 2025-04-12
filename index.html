@@ -122,8 +122,8 @@ var maxTimer = 60;
 var correctScore = 100;
 var correctTimer = 10;
 var skipPenalty = 25;
-var cacheSize = 1;
-var safeCacheSize = 1;
+var cacheSize = 20;
+var safeCacheSize = 3;
 
 function ensureCache()
 {
@@ -139,7 +139,7 @@ function ensureCache()
         }
     });
   }
-  if (demos.length > safeCacheSize)
+  if (demos.length >= safeCacheSize)
   {
     $("start").disabled = null;
   }
