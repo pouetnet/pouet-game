@@ -1,4 +1,4 @@
-<?
+<?php
 include_once("config.inc.php");
 
 $sql = new SQLSelect();
