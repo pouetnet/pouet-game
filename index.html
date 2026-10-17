@@ -154,7 +154,7 @@ function gameOver()
   encountered.each(function(e){
     var li = new Element("li");
     li.insert(new Element("img",{src:e.screenshot}));
-    li.insert(new Element("a",{href:"http://www.pouet.net/prod.php?which="+e.id}).update(e.name));
+    li.insert(new Element("a",{href:e.url}).update(e.name));
     $("demos").down("ul").insert(li);
   });
   clearInterval(interval);
