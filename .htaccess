@@ -1,0 +1,2 @@
+# Repo files, never served directly
+RedirectMatch 404 (?i)^/(README\.md|config\.inc\.php\.dist)$
