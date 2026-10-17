@@ -27,7 +27,7 @@ just setup
 
 This clones this repo and the other site repos under `sites/`, starts
 everything and loads sample data. The game is then on
-<http://localhost:8085>. pouet-infra's `ARCHITECTURE.md` describes how it
+<http://game.pouet.localhost>. pouet-infra's `ARCHITECTURE.md` describes how it
 runs in production.
 
 ## Contributing
