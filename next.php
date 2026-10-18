@@ -14,6 +14,7 @@ $sql->AddWhere("find_in_set('demotool',type)=0");
 $sql->AddOrder("rand()");
 $prod = SQLLib::SelectRow($sql->GetQuery());
 $prod->screenshot = POUET_CONTENT_URL . find_screenshot($prod->id);
+$prod->url = POUET_ROOT_URL_SECURE . "prod.php?which=" . $prod->id;
 
 header("Content-type: application/json");
 echo json_encode(["prod" => $prod]);
